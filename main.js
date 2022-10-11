@@ -2,8 +2,22 @@
 // Prompt 1: Hang Man
 // Project Objective - This is a terminal based app. Reveal a letter from a word if a user inputs that letter and it exists in the word. If it doesn't let the user know.
 
+let hiddenWord = "Hello".split('')
+let playerWord = "-----".split('')
 
+const hangMan = (input) => {
+    hiddenWord.forEach(letter, index => {
+        if (input.toUpperCase() == letter) {
+            playerWord[index] = input;
+        } else {
+            console.log('Incorrect Guess')
+        }
+        console.log(playerWord.toString())
+    });
+}
 
+hangMan('h')
+hangMan('i')
 
 // -----
 // Prompt 2: Ramp Numbers
