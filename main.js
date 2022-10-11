@@ -48,6 +48,32 @@ const hangmanFunc = (guess) => {
 
 // Challenge: Given the input of a number, build a program that will find the total number of ramp numbers that are less than it.
 
+const rampCounter = (x) => {
+    let controlNumber = 1;
+    let answer = 0;
+    while (controlNumber <= x) {
+        if (isRamp(controlNumber)) {
+            answer++
+        }
+        controlNumber++         
+    }
+    console.log(answer)
+}
+
+const isRamp = (y) => {
+    let numArray = y.toString().split('')
+    let failCount = 0
+    for (let index = 0; index < numArray.length; index++) {
+        if (numArray[index+1] < numArray[index]){
+        failCount++
+    }
+    }
+    if(failCount == 0){
+        return true
+    }
+}
+
+rampCounter(99999)
 
 
 
