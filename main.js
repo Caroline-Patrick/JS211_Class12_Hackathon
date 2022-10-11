@@ -2,19 +2,7 @@
 // Prompt 1: Hang Man
 // Project Objective - This is a terminal based app. Reveal a letter from a word if a user inputs that letter and it exists in the word. If it doesn't let the user know.
 
-let hiddenWord = "Hello".split('')
-let playerWord = "-----".split('')
 
-const hangMan = (input) => {
-    hiddenWord.forEach(letter, index => {
-        if (input.toUpperCase() == letter) {
-            playerWord[index] = input;
-        } else {
-            console.log('Incorrect Guess')
-        }
-        console.log(playerWord.toString())
-    });
-}
 
 hangMan('h')
 hangMan('i')
@@ -34,3 +22,38 @@ hangMan('i')
 
 
 
+
+
+
+
+// let words = [
+//     "johnny",
+//     "dylan",
+//     "ramya",
+//     "riley",
+//     "bo",
+//     "caroline",
+//     "caleb",
+//     "emily"
+// ]
+// let word=words[Math.floor(Math.random) * words.length]
+// let answerArray = [];
+
+// for (let i = 0; i < word.length; i++) {
+//     answerArray[i] = "_";
+// }
+
+// let guessArray = [];
+// let lives = word.length;
+// lives = lives+2;
+// let remainingLetters = word.length;
+// console.log('Lets start the game\n');
+// while (remainingLetters > 0) {
+//     console.log (answerArray.join(" "));
+//     console.log('\n');
+//     if (lives == 1) {
+//         console.log('You have 1 life left');
+//     } else if (lives > 1) {
+//         console.log ('You have ' + lives + 'lives left');
+//     }
+// }
