@@ -1,7 +1,21 @@
 // -----
 // Prompt 1: Hang Man
 // Project Objective - This is a terminal based app. Reveal a letter from a word if a user inputs that letter and it exists in the word. If it doesn't let the user know.
-
+ // initializing Arrays
+ let playerWord = '-----'.split('')
+ let hiddenWord = 'HELLO'.split('')
+ 
+ // Main function
+ const hangmanFunc = (letter) => {
+     for (let index = 0; index < hiddenWord.length; index++) {
+         const element = hiddenWord[index];
+         const place = hiddenWord.indexOf(element);        
+         if(letter.toUpperCase() == element){
+             playerWord[place] = letter.toUpperCase()
+             }
+         }
+     document.getElementById("output").innerHTML = playerWord
+ }
 
 
 
