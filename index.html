@@ -4,10 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="main.js"></script>
-    <title>JS211 Class 12 Hackathon</title>
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
 </head>
 <body>
-    
+    <input type="text" name="hangman" id="hangman" maxlength="1" title="Check Letter" onkeydown="return /[a-z]/i.test(event.key)" class="input">
+    <button type="submit" style="margin-top: 10px;" onclick="hangmanFunc(hangman.value)">Submit</button>
+    <div class="output" id="output">-----</div>
+    <div class="warning" id="warning"></div>
+    <script src="main.js"></script>
 </body>
 </html>
