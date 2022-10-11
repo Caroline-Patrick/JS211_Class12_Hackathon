@@ -1,25 +1,25 @@
 // -----
 // Prompt 1: Hang Man
 // Project Objective - This is a terminal based app. Reveal a letter from a word if a user inputs that letter and it exists in the word. If it doesn't let the user know.
- // initializing Arrays
- let hiddenWord = "Hello".split('')
- let playerWord = "-----".split('')
+// initializing Arrays
+let playerWord = '-----'.split('')
+let hiddenWord = 'HELLO'.split('')
 
- 
- const hangMan = (input) => {
-     hiddenWord.forEach(letter, index => {
-         if (input.toUpperCase() == letter) {
-             playerWord[index] = input;
-         } else {
-             console.log('Incorrect Guess')
-         }
-         console.log(playerWord.toString())
-     });
- }
- 
- hangMan('h')
- hangMan('i')
-
+// Main funciton
+const hangmanFunc = (guess) => {
+    let runCount = 0
+    for (let index = 0; index < hiddenWord.length; index++) {
+        if(guess.toUpperCase() == hiddenWord[index]){
+            playerWord[index] = guess.toUpperCase()
+            runCount++
+        } else if(runCount != 0){
+            document.getElementById("warning").innerHTML = ""
+        } else {
+            document.getElementById("warning").innerHTML = "Guess harder"
+    }
+    document.getElementById("output").innerHTML = playerWord
+    document.getElementById("hangman").value = ""
+}}
 
 // -----
 // Prompt 2: Ramp Numbers
