@@ -57,38 +57,3 @@ const hangmanFunc = (guess) => {
 
 
 
-
-
-
-
-// let words = [
-//     "johnny",
-//     "dylan",
-//     "ramya",
-//     "riley",
-//     "bo",
-//     "caroline",
-//     "caleb",
-//     "emily"
-// ]
-// let word=words[Math.floor(Math.random) * words.length]
-// let answerArray = [];
-
-// for (let i = 0; i < word.length; i++) {
-//     answerArray[i] = "_";
-// }
-
-// let guessArray = [];
-// let lives = word.length;
-// lives = lives+2;
-// let remainingLetters = word.length;
-// console.log('Lets start the game\n');
-// while (remainingLetters > 0) {
-//     console.log (answerArray.join(" "));
-//     console.log('\n');
-//     if (lives == 1) {
-//         console.log('You have 1 life left');
-//     } else if (lives > 1) {
-//         console.log ('You have ' + lives + 'lives left');
-//     }
-// }
