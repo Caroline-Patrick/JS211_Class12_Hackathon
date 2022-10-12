@@ -76,10 +76,18 @@ const isRamp = (y) => {
 rampCounter(99999)
 
 
-
 // -----
 // Prompt 3: Count It
 // Given a sentence, paragraph or novel, count the letters in the string. Ignore whitespace and anything not [a-z][A-Z], i.e. punctuations and numbers.
 
 
+function count (string) {  
+    var count = {};
+    string.split('').forEach(function(s) {
+       count[s] ? count[s]++ : count[s] = 1;
+    });
+    return count;
+  }
 
+  console.log(count("Hello World"))
+  console.log(count("Test String"))
