@@ -80,14 +80,26 @@ rampCounter(99999)
 // Prompt 3: Count It
 // Given a sentence, paragraph or novel, count the letters in the string. Ignore whitespace and anything not [a-z][A-Z], i.e. punctuations and numbers.
 
+// const letterObject = {
+//     a:0, b:0, c:0, d:0, e:0, f:0, g:0, h:0, i:0, j:0, k:0, l:0, m:0, n:0, o:0, p:0, q:0, r:0, s:0, t:0, u:0, v:0, w:0, x:0, y:0, z:0
+// }
+const letterObject = {
 
-function count (string) {  
-    var count = {};
-    string.split('').forEach(function(s) {
-       count[s] ? count[s]++ : count[s] = 1;
+}
+
+let sentence = "Hello world!"
+
+const countIt = (input) => {
+    let trimmedInput = input.trim().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,"");
+    let finalStringArr = trimmedInput.split(" ").join('').split("")
+    finalStringArr.forEach(element => {
+        if (letterObject[element]){
+            letterObject[element]++
+        }else {
+            letterObject[element] = 1
+        };
     });
-    return count;
-  }
+    console.log(letterObject)
+}
 
-  console.log(count("Hello World"))
-  console.log(count("Test String"))
+countIt(sentence)
