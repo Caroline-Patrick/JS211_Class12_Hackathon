@@ -65,3 +65,23 @@ const isRamp = (num) => {
 
 
 
+const string = "hello world!"
+const punctuation = "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~ ";
+
+
+const letterCount = (string) => {
+   let noPuncArray = string.split("")
+    .filter(function (letter) {
+      return punctuation.indexOf(letter) === -1;
+    }) // returns array w/o any punctuation
+  
+let counts = {} // create empty object
+for (let i = 0; i < noPuncArray.length; i++) { // loop through array and define object key value pairs. each 'counts[noPuncArray[i]]' uses bracket notation to say/assign that the counts object.H = 1 + any other instances of H OR 0 if there are none
+  counts[noPuncArray[i]]
+ =1 +(counts[noPuncArray[i]] || 0)};
+  console.log(counts)
+  
+}
+
+letterCount(string)
+
